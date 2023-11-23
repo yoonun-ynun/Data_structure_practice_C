@@ -28,14 +28,22 @@ int main(){
     stack = (Stack*)(list.get(&list, 0));
     printf("%d ", stack->pop(stack));
     printf("%d\n", stack->pop(stack));
+    _stack_free_(stack);
+    free(stack);
     
     stack = (Stack*)(list.get(&list, 2));
     printf("%d ", stack->pop(stack));
     printf("%d\n", stack->pop(stack));
+    _stack_free_(stack);
+    free(stack);
     
     stack = (Stack*)(list.get(&list, 1));
     printf("%d ", stack->pop(stack));
     printf("%d\n", stack->pop(stack));
+    _stack_free_(stack);
+    free(stack);
+
+    _Linkedlist_free_(&list);
     
     return 0;
 }
